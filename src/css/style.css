@@ -1,5 +1,6 @@
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .img-fluid {
   width: 160px;
@@ -8,16 +9,20 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
 #about {
-  word-spacing: 4px; }
+  word-spacing: 4px;
+}
 
 .img {
-  width: 40px; }
+  width: 40px;
+}
 
 .text {
   text-transform: uppercase;
   background: linear-gradient(to right, #33ccff 0%, #cc66ff 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: white;
+}
