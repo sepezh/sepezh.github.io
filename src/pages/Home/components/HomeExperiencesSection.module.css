@@ -1,0 +1,116 @@
+.compsListBorder {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: nowrap;
+}
+
+.compsList {
+  list-style: none;
+  padding-left: 0;
+  flex: 1 0 0px;
+
+  :global(li) {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.content {
+  flex: 4 0 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role {
+  font-weight: 600;
+}
+
+.listItem {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 0;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+
+  &.active {
+    color: var(--color-brand-purple);
+
+    .border {
+      background-color: var(--color-brand-purple);
+    }
+  }
+}
+
+.border {
+  flex: none;
+  height: 90px;
+  overflow: visible;
+  position: relative;
+  width: 3px;
+  background-color: var(--color-options-border);
+  opacity: 1;
+}
+
+.date {
+  font-size: small;
+}
+
+.taskList {
+  list-style: square;
+
+  li::marker {
+    color: var(--color-brand-purple);
+  }
+
+  :global(li) {
+    margin-bottom: 20px;
+  }
+}
+
+.paginationBtns {
+  display: none;
+
+  button {
+    background-color: white;
+    border-radius: 50%;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 5px 4px;
+  }
+}
+
+@media (max-width: 810px) {
+  .compsList {
+    display: none;
+  }
+
+  .content {
+    height: 400px;
+    overflow: hidden;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fadeOut {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .paginationBtns {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

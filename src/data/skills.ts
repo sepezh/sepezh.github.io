@@ -1,0 +1,73 @@
+type skillType = {
+  id: number;
+  name: string;
+};
+
+export type skillCategoryType = {
+  id: number;
+  name: string;
+  skills: skillType[];
+};
+
+export const skillsCategories: skillCategoryType[] = [
+  {
+    id: 1,
+    name: 'Frontend Core',
+    skills: [
+      { id: 1, name: 'Javascript' },
+      { id: 2, name: 'Typescript' },
+      { id: 3, name: 'HTML5' },
+      { id: 4, name: 'CSS3' },
+      { id: 5, name: 'Responsive Design' },
+      { id: 6, name: 'Sass' },
+      { id: 7, name: 'Tailwind' },
+      { id: 8, name: 'Bootstrap' },
+      { id: 9, name: 'MUI' },
+      { id: 10, name: 'AntD' },
+      { id: 11, name: 'UI/UX Principles' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Frameworks & Libraries',
+    skills: [
+      { id: 1, name: 'React' },
+      { id: 2, name: 'Next.js' },
+      { id: 3, name: 'Vue.js' },
+      { id: 4, name: 'React Native' },
+      { id: 5, name: 'Redux' },
+      { id: 6, name: 'Redux Toolkit' },
+      { id: 7, name: 'Context API' },
+      { id: 8, name: 'React Query(Tanstack Query)' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Backend & Full-Stack',
+    skills: [
+      { id: 1, name: 'Rest API' },
+      { id: 2, name: 'Axios' },
+      { id: 3, name: 'AJAX' },
+      { id: 4, name: 'Python' },
+      { id: 5, name: 'Django' },
+      { id: 6, name: 'Java' },
+      { id: 7, name: 'SQL' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Testing, Tooling & DevOps',
+    skills: [
+      { id: 1, name: 'Vitest' },
+      { id: 2, name: 'Cypress' },
+      { id: 3, name: 'Unit Testing' },
+      { id: 4, name: 'Storybook' },
+      { id: 5, name: 'Webpack' },
+      { id: 6, name: 'Vite' },
+      { id: 7, name: 'Npm/Yarn' },
+      { id: 8, name: 'Git' },
+      { id: 9, name: 'Jira' },
+      { id: 10, name: 'CI/CD' },
+    ],
+  },
+];

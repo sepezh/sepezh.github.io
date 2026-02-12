@@ -1,0 +1,36 @@
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 20px;
+  background-color: var(--color-marquee);
+  padding: 30px 0;
+  border-radius: 20px;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.item {
+  padding: 5px 10px;
+  background: black;
+  color: white;
+  border-radius: 12px;
+}

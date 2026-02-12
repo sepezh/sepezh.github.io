@@ -1,0 +1,50 @@
+.experience {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+
+  &:last-child {
+    .experience-content {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.progressbar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experienceId {
+  margin-bottom: 8px;
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: -20px;
+}
+
+.progressbar-track {
+  position: relative;
+  width: 3px;
+  /* height: 100%; */
+}
+
+.indicator {
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-brand-purple);
+  border-radius: 999px;
+  top: 0;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 670px) {
+  .experienceId {
+    font-size: 48px;
+    margin-top: -10px;
+  }
+}

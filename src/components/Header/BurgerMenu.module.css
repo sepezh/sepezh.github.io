@@ -1,0 +1,48 @@
+.rightMobile {
+  display: none;
+}
+
+.themeBtn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+
+  svg {
+    color: var(--text-color);
+  }
+}
+
+.themeBtn:hover {
+  transform: scale(1.15);
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    font-size: 28px;
+    color: var(--text-color);
+  }
+}
+
+@media (max-width: 810px) {
+  .burger {
+    display: block;
+  }
+
+  .rightMobile {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 12px;
+
+    .themeBtn {
+      margin-top: 5px;
+    }
+  }
+}

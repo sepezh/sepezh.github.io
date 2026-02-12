@@ -1,0 +1,30 @@
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillsCategory {
+  flex: 1 1 calc(25% - 1rem);
+
+  :global(h4) {
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+}
+
+.skillsList {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (min-width: 810px) and (max-width: 1200px) {
+  .skillsCategory {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 810px) {
+  .skillsCategory {
+    flex: 1 1 100%;
+  }
+}

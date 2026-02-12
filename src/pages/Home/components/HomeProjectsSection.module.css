@@ -1,0 +1,21 @@
+.main-home-project {
+  display: grid;
+  flex: none;
+  gap: 40px;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(5, minmax(1px, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .main-home-project {
+    display: flex;
+    flex-direction: column;
+  }
+}
