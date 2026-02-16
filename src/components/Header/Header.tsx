@@ -77,9 +77,10 @@ export default function Header() {
       <div className={classes.right}>
         <button onClick={toggleTheme} className={classes.themeBtn}>
           {theme === 'light' ? (
-            <FontAwesomeIcon icon={faSun} />
+            <span className="material-symbols-rounded">nightlight</span>
           ) : (
-            <FontAwesomeIcon icon={faMoon} />
+            // <FontAwesomeIcon icon={faSun} />
+            <span className="material-symbols-rounded">wb_sunny</span>
           )}
         </button>
 
@@ -89,7 +90,7 @@ export default function Header() {
             `${classes.email} ${isActive ? classes.active : undefined}`
           }
         >
-          <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon>
+          <span className="material-symbols-rounded">chat</span>
         </NavLink>
       </div>
     </header>

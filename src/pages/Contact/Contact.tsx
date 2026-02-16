@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-
 import profileImg from '../../assets/Profile.png';
 import IntroSection from '../../components/shared/IntroSection/IntroSection';
 import classes from './contact.module.css';
@@ -22,14 +19,14 @@ export default function ContactMe() {
         >
           <div className={classes.contactItemWrapper}>
             <a href="mailto:sepide.eslamnezhad@gmail.com">
-              <span>
-                <FontAwesomeIcon icon={faEnvelope} />
+              <span className={classes.iconsBorder}>
+                <span className="material-symbols-rounded">mail</span>
               </span>
               sepide.eslamnezhad@gmail.com
             </a>
             <a href="tel:+491734627724">
-              <span>
-                <FontAwesomeIcon icon={faPhone} />
+              <span className={classes.iconsBorder}>
+                <span className="material-symbols-rounded">call</span>
               </span>
               +49 173 462 7724
             </a>

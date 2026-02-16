@@ -101,18 +101,29 @@
   margin-bottom: 0;
   color: var(--text-color);
   text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 
-  svg {
-    margin-left: 10px;
-    font-size: 20px;
-    color: var(--color-brand-purple);
+  .iconsBorder {
+    :global(.material-symbols-rounded) {
+      font-size: 18px;
+      color: var(--color-brand-purple);
+      border: var(--color-brand-purple) solid 2px;
+      border-radius: 100%;
+      margin-left: 10px;
+    }
   }
 
   &:hover {
-    color: var(--text-color-hover);
+    color: var(--text-color-hovered);
 
-    svg {
-      color: var(--color-brand-purple-hovered);
+    :global(.material-symbols-rounded) {
+      color: var(--bg-color);
+      border-color: var(--color-brand-purple);
+      background-color: var(--color-brand-purple);
     }
   }
 }

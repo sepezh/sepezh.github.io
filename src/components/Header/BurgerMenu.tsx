@@ -1,11 +1,4 @@
 import type { FC } from 'react';
-import {
-  faBars,
-  faMoon,
-  faSun,
-  faTimes,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import classes from './BurgerMenu.module.css';
@@ -27,9 +20,9 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
     <div className={classes.rightMobile}>
       <button onClick={toggleTheme} className={classes.themeBtn}>
         {theme === 'light' ? (
-          <FontAwesomeIcon icon={faSun} />
+          <span className="material-symbols-rounded">nightlight</span>
         ) : (
-          <FontAwesomeIcon icon={faMoon} />
+          <span className="material-symbols-rounded">wb_sunny</span>
         )}
       </button>
 
@@ -47,7 +40,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
               exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
             >
-              <FontAwesomeIcon icon={faTimes} />
+              <span className="material-symbols-rounded">close</span>
             </motion.div>
           ) : (
             <motion.div
@@ -57,7 +50,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
               exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
             >
-              <FontAwesomeIcon icon={faBars} />
+              <span className="material-symbols-rounded">menu</span>
             </motion.div>
           )}
         </AnimatePresence>

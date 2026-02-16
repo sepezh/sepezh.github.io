@@ -1,6 +1,4 @@
 import type { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './ProjectCard.module.css';
 
@@ -33,7 +31,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <div className={classes.content}>
             <a href={link} className={classes.projectLink}>
               {name}
-              <FontAwesomeIcon icon={faPaperPlane} />
+              <span className={classes.iconsBorder}>
+                <span className="material-symbols-rounded">arrow_outward</span>
+              </span>
             </a>
             <p>{description}</p>
           </div>

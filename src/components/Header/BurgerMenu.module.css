@@ -9,10 +9,6 @@
   cursor: pointer;
   margin-right: 1rem;
   transition: transform 0.2s ease;
-
-  svg {
-    color: var(--text-color);
-  }
 }
 
 .themeBtn:hover {
@@ -24,11 +20,7 @@
   background: none;
   border: none;
   cursor: pointer;
-
-  svg {
-    font-size: 28px;
-    color: var(--text-color);
-  }
+  padding-bottom: 4px;
 }
 
 @media (max-width: 810px) {
