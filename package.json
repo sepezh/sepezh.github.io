@@ -1,8 +1,23 @@
 {
   "name": "sepezh",
+  "version": "1.0.0",
+  "description": "Saiedeh Nezhad's (Sepezh) professional portfolio showcasing skills in React, TypeScript, and full-stack development",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Saiedeh Nezhad",
+    "url": "https://sepezh.dev"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "react",
+    "typescript",
+    "vite",
+    "full-stack",
+    "web-development"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
