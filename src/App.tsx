@@ -11,22 +11,27 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    handle: { title: 'Home | Sepezh' },
     children: [
       {
         path: '',
         element: <Home />,
+        handle: { title: 'Home | Sepezh' },
       },
       {
         path: 'about-me',
         element: <About />,
+        handle: { title: 'About | Sepezh' },
       },
       {
         path: 'projects',
         element: <Projects />,
+        handle: { title: 'Projects | Sepezh' },
       },
       {
         path: 'contact',
         element: <Contact />,
+        handle: { title: 'Contact | Sepezh' },
       },
     ],
   },
