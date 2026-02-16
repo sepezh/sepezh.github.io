@@ -20,6 +20,7 @@ html {
 
   --bg-color: #fff;
   --text-color: #1a1a1a;
+  --text-color-hovered: #5a5a5a;
   --color-brand-purple: #6e06f2;
   --color-brand-purple-circle: rgba(110, 6, 242, 0.4);
   --color-brand-purple-hovered: rgba(110, 6, 242, 0.8);
@@ -30,6 +31,7 @@ html {
 [data-theme='dark'] {
   --bg-color: #1a1a1a;
   --text-color: #f1f1f1;
+  --text-color-hovered: #aaaaaa;
   --color-brand-purple: #b48cff;
   --color-brand-purple-circle: rgba(150, 80, 255, 0.4);
   --color-brand-purple-hovered: rgba(150, 80, 255, 0.8);
@@ -103,6 +105,11 @@ ul {
     margin-bottom: 10px;
     font-size: 18px;
   }
+}
+
+.material-symbols-rounded {
+  color: var(--text-color);
+  font-size: 30px;
 }
 
 .purple {
