@@ -1,10 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAddressCard,
-  faMoon,
-  faSun,
-} from '@fortawesome/free-solid-svg-icons';
 
 import { useTheme } from '../../context/theme-context';
 import classes from './Header.module.css';
