@@ -2,7 +2,7 @@ import profileImg from '../../assets/Profile.png';
 import IntroSection from '../../components/shared/IntroSection/IntroSection';
 import classes from './contact.module.css';
 
-export default function ContactMe() {
+export default function Contact() {
   return (
     <main>
       <div className={classes.contact}>
