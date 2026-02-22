@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import classes from './ProjectCard.module.css';
+import BaseImageWrapper from '../../../components/shared/BaseImageWrapper/BaseImageWrapper';
 
 type ProjectCardProps = {
   image: string;
@@ -22,11 +23,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
     <div className={className}>
       <div className={classes.container}>
         <div className={classes.inner}>
-          <div className={classes.image}>
-            <div className={classes.imgContainer}>
-              <img src={image} alt={name} className={classes.projectImg} />
-            </div>
-          </div>
+          <BaseImageWrapper
+            wrapperClass={classes.imageWrapper}
+            containerClass={classes.imageContainer}
+            imgClass={classes.image}
+            src={image}
+            alt={name}
+          />
 
           <div className={classes.content}>
             <a href={link} className={classes.projectLink}>

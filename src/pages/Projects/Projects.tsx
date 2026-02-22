@@ -1,6 +1,6 @@
-import ProjectsSection from "./components/ProjectsSection";
+import ProjectsSection from './components/ProjectsSection';
 
-export default function ProjectsPage() {
+export default function Projects() {
   return (
     <main>
       <section>
