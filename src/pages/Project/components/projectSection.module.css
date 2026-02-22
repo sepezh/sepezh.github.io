@@ -1,0 +1,17 @@
+.detailWrapper {
+  display: flex;
+  gap: 6rem;
+}
+
+@media (min-width: 810px) and (max-width: 1200px) {
+  .detailWrapper {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .detailWrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

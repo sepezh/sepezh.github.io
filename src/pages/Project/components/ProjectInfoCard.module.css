@@ -1,0 +1,44 @@
+.detailCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  border: var(--color-brand-purple) solid 2px;
+  box-shadow: 0 0 4px 0 var(--color-brand-purple);
+  border-radius: 8px;
+  text-align: left;
+  padding: 0 20px;
+  height: fit-content;
+  position: sticky;
+  overflow: hidden;
+  top: 50px;
+  margin-bottom: 50px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.value {
+  font-weight: 700;
+}
+
+@media (max-width: 810px) {
+  .detailCard {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: unset;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .detailCard {
+    flex-direction: column;
+  }
+}

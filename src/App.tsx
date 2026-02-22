@@ -4,8 +4,10 @@ import Home from './pages/Home/Home.tsx';
 import RootLayout from './pages/Root.tsx';
 import About from './pages/About/About.tsx';
 import Projects from './pages/Projects/Projects.tsx';
+import Project, { projectLoader } from './pages/Project/Project.tsx';
 import Contact from './pages/Contact/Contact.tsx';
 import { ThemeProvider } from './context/theme-context.tsx';
+import ProjectsRoot from './pages/ProjectsRoot.tsx';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
     handle: { title: 'Home | Sepezh' },
     children: [
       {
-        path: '',
+        index: true,
         element: <Home />,
         handle: { title: 'Home | Sepezh' },
       },
@@ -25,8 +27,19 @@ const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: <Projects />,
-        handle: { title: 'Projects | Sepezh' },
+        element: <ProjectsRoot />,
+        children: [
+          {
+            index: true,
+            element: <Projects />,
+            handle: { title: 'Projects | Sepezh' },
+          },
+          {
+            path: ':projectName',
+            element: <Project />,
+            loader: projectLoader,
+          },
+        ],
       },
       {
         path: 'contact',
