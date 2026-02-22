@@ -1,20 +1,23 @@
-import type { FC, ReactNode } from "react";
-import classes from "./Button.module.css";
+import type { FC, ReactNode } from 'react';
+import classes from './Button.module.css';
+import { Link } from 'react-router-dom';
 
 type ButtonProps = {
   href?: string;
+  to?: string;
   onClick?: () => void;
-  type?: "button" | "submit";
+  type?: 'button' | 'submit';
   children?: ReactNode;
-  variant: "primary" | "secondary";
+  variant: 'primary' | 'secondary';
 };
 
 const Button: FC<ButtonProps> = ({
   href,
+  to,
   onClick,
-  type = "button",
+  type = 'button',
   children,
-  variant = "primary",
+  variant = 'primary',
 }) => {
   const className = `${classes.btn} ${classes[variant]}`;
   if (href) {
@@ -22,6 +25,13 @@ const Button: FC<ButtonProps> = ({
       <a href={href} className={className}>
         {children}
       </a>
+    );
+  }
+  if (to) {
+    return (
+      <Link to={to} className={className}>
+        {children}
+      </Link>
     );
   }
 
