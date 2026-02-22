@@ -7,10 +7,9 @@ export default function RootLayout() {
   const matches = useMatches();
 
   useEffect(() => {
-    const handle = matches[matches.length - 1]?.handle as
-      | { title?: string }
-      | undefined;
-    const title = handle?.title || 'Sepezh | Full Stack Developer';
+    const lastMatch = matches[matches.length - 1];
+    const data = lastMatch.data as { title?: string } | undefined;
+    const title = data?.title || 'Full Stack Developer | Sepezh';
     document.title = title;
   }, [matches]);
 
