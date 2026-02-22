@@ -1,12 +1,12 @@
 .projectLink {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  flex-flow: column wrap;
-  height: min-content;
+  /* flex: 0 0 auto; */
+  /* flex-flow: column wrap; */
+  /* height: min-content; */
   width: 100%;
   top: 25px;
-  padding: 0px;
+  /* padding: 0px; */
   overflow: hidden;
   position: sticky;
   text-decoration: none;
@@ -16,14 +16,12 @@
 .textWrapper {
   background-color: var(--bg-color);
   color: var(--text-color);
-  margin-top: -10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  /* margin-top: -10px; */
+  /* border-radius: 0 0 10px 10px; */
   padding-left: 10px;
 }
 
 .imageWrapper {
-  border-radius: 10px;
   flex: 0 0 auto;
   height: 69vh;
   position: relative;
@@ -32,7 +30,6 @@
 
 .imageContainer {
   position: absolute;
-  border-radius: inherit;
   inset: 0px;
 }
 
@@ -42,8 +39,7 @@
   height: 100%;
   object-position: center center;
   object-fit: cover;
-  image-rendering: auto;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 @media (min-width: 810px) and (max-width: 1200px) {
