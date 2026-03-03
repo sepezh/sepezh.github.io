@@ -5,6 +5,7 @@ import { componies, type componyType } from '../../../data/componies';
 import classes from './HomeExperiencesSection.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import TechTag from '../../../components/ui/TechTag/TechTag';
 
 export default function HomeExperiencesSection() {
   const [selectedComponyId, setSelectedComponyId] =
@@ -13,7 +14,7 @@ export default function HomeExperiencesSection() {
   const [fade, setFade] = useState<boolean>(false);
 
   const selectedExperience: experienceType | undefined = experiences.find(
-    item => item.compony_id === selectedComponyId
+    item => item.company.compony_id === selectedComponyId
   );
 
   const nextBtnHandler = () => {
@@ -21,7 +22,7 @@ export default function HomeExperiencesSection() {
     if (experienceNo < experiences.length - 1) {
       setTimeout(() => {
         setExperienceNo(prev => prev + 1);
-        setSelectedComponyId(experiences[experienceNo + 1].compony_id);
+        setSelectedComponyId(experiences[experienceNo + 1].company.compony_id);
         setFade(false);
       }, 200);
     }
@@ -32,7 +33,7 @@ export default function HomeExperiencesSection() {
     if (experienceNo > 0) {
       setTimeout(() => {
         setExperienceNo(prev => prev - 1);
-        setSelectedComponyId(experiences[experienceNo - 1].compony_id);
+        setSelectedComponyId(experiences[experienceNo - 1].company.compony_id);
         setFade(false);
       }, 200);
     }
@@ -47,14 +48,17 @@ export default function HomeExperiencesSection() {
         <ul className={classes.compsList}>
           {componies.map((comp: componyType) => (
             <li
-              key={comp.id}
+              key={comp.compony_id}
               className={`${classes.listItem} ${
-                selectedComponyId === comp.id ? classes.active : undefined
+                selectedComponyId === comp.compony_id
+                  ? classes.active
+                  : undefined
               }`}
-              onClick={() => setSelectedComponyId(comp.id)}
             >
               <div className={classes.border} />
-              <div>{comp.name}</div>
+              <span onClick={() => setSelectedComponyId(comp.compony_id)}>
+                {comp.compony_name}
+              </span>
             </li>
           ))}
         </ul>
@@ -62,16 +66,20 @@ export default function HomeExperiencesSection() {
         {selectedExperience && (
           <div
             className={`${classes.content} ${fade ? classes.fadeOut : classes.fadeIn}`}
-            key={selectedExperience.compony_id}
+            key={selectedExperience.company.compony_id}
           >
             <div>
               <h4 className={classes.role}>
-                {selectedExperience.role}{' '}
+                {selectedExperience.role}
                 <span className="purple">
-                  @ {selectedExperience.compony_name}
+                  @ {selectedExperience.company.compony_name}
                 </span>
               </h4>
-              <p className={classes.date}>{selectedExperience.date}</p>
+              <div className={classes.subtextsWrapper}>
+                <p>{selectedExperience.date}</p>
+                <p>{selectedExperience.company.about}</p>
+              </div>
+              <TechTag tags={selectedExperience.techTags} />
             </div>
             <ul className={classes.taskList}>
               {selectedExperience.tasks.map(task => (

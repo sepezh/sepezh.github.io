@@ -3,6 +3,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 
 import { experiences, type experienceType } from '../../../data/experiences';
 import classes from './AboutExperiencesSection.module.css';
+import TechTag from '../../../components/ui/TechTag/TechTag';
 
 export default function AboutExperiencesSection() {
   return (
@@ -11,7 +12,7 @@ export default function AboutExperiencesSection() {
         My Experience<span className="purple">.</span>
       </h2>
       {experiences.map((exp: experienceType) => (
-        <ExperienceItem key={exp.compony_id} exp={exp} />
+        <ExperienceItem key={exp.company.compony_id} exp={exp} />
       ))}
     </section>
   );
@@ -44,7 +45,7 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
 
         <div
           className={classes['progressbar-track']}
-          style={{ height: contentHeight }}
+          style={{ height: `${contentHeight}px` }}
         >
           <motion.div
             className={classes.indicator}
@@ -60,8 +61,13 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
 
       <div ref={contentRef} className={classes['experience-content']}>
         <p className="purple">{exp.role}</p>
-        <h3>{exp.compony_name}</h3>
-        <p>{exp.location}</p>
+        <h3>{exp.company.compony_name}</h3>
+        <div className={classes.subtextsWrapper}>
+          <p>{exp.date}</p>
+          <p>{exp.location}</p>
+          <p>{exp.company.about}</p>
+        </div>
+        <TechTag tags={exp.techTags} />
         <ul>
           {exp.tasks.map(task => (
             <li key={task.id}>{task.text}</li>

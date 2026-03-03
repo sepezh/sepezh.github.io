@@ -1,0 +1,15 @@
+.tagsWrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--subtext-color);
+  color: var(--bg-color);
+  width: fit-content;
+  height: fit-content;
+}
