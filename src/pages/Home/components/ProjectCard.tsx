@@ -2,12 +2,12 @@ import type { FC } from 'react';
 
 import classes from './ProjectCard.module.css';
 import BaseImageWrapper from '../../../components/shared/BaseImageWrapper/BaseImageWrapper';
+import { Link } from 'react-router-dom';
 
 type ProjectCardProps = {
   image: string;
   name: string;
   description: string;
-  link?: string;
   variant: string;
 };
 
@@ -15,9 +15,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
   image,
   name,
   description,
-  link,
   variant,
 }) => {
+  const projectLink = name.toLowerCase();
   const className = `${classes.proj} ${classes[variant]}`;
   return (
     <div className={className}>
@@ -32,12 +32,15 @@ const ProjectCard: FC<ProjectCardProps> = ({
           />
 
           <div className={classes.content}>
-            <a href={link} className={classes.projectLink}>
+            <Link
+              to={`projects/${projectLink}`}
+              className={classes.projectLink}
+            >
               {name}
               <span className={classes.iconsBorder}>
                 <span className="material-symbols-rounded">arrow_outward</span>
               </span>
-            </a>
+            </Link>
             <p>{description}</p>
           </div>
         </div>

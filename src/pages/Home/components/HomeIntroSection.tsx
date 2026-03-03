@@ -22,7 +22,7 @@ export default function HomeIntroSection() {
           <Button href="mailto:sepide.eslamnezhad@gmail.com" variant="primary">
             Get In Touch
           </Button>
-          <Button href="projectsPage.html" variant="secondary">
+          <Button to="/projects" variant="secondary">
             Brows Projects
           </Button>
         </div>
