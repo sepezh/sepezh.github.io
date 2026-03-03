@@ -18,20 +18,41 @@
 }
 
 .content {
+  opacity: 0;
   flex: 4 0 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transform: translateY(8px);
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .role {
   font-weight: 600;
 }
 
+.subtextsWrapper {
+  :global(p) {
+    font-size: 14px;
+    color: var(--subtext-color);
+    font-style: italic;
+  }
+}
+
 .listItem {
   position: relative;
   display: flex;
-  cursor: pointer;
   margin-bottom: 0;
   gap: 20px;
   justify-content: flex-start;
@@ -44,6 +65,11 @@
       background-color: var(--color-brand-purple);
     }
   }
+
+  span {
+    display: inline;
+    cursor: pointer;
+  }
 }
 
 .border {
@@ -54,10 +80,6 @@
   width: 3px;
   background-color: var(--color-options-border);
   opacity: 1;
-}
-
-.date {
-  font-size: small;
 }
 
 .taskList {
@@ -90,11 +112,11 @@
   }
 
   .content {
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     transition:
-      opacity 0.2s ease,
-      transform 0.2s ease;
+      opacity 0.5s ease,
+      transform 0.5s ease;
   }
 
   .fadeIn {

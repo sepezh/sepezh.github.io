@@ -20,6 +20,7 @@ html {
 
   --bg-color: #fff;
   --text-color: #1a1a1a;
+  --subtext-color: #5f5f5f;
   --text-color-hovered: #5a5a5a;
   --color-brand-purple: #6e06f2;
   --color-brand-purple-circle: rgba(110, 6, 242, 0.4);
@@ -31,6 +32,7 @@ html {
 [data-theme='dark'] {
   --bg-color: #1a1a1a;
   --text-color: #f1f1f1;
+  --subtext-color: #949494;
   --text-color-hovered: #aaaaaa;
   --color-brand-purple: #b48cff;
   --color-brand-purple-circle: rgba(150, 80, 255, 0.4);
@@ -56,14 +58,17 @@ main {
   text-align: start;
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 section {
-  margin-bottom: 50px;
   width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
 }
 
 h2,
@@ -117,18 +122,12 @@ ul {
 }
 
 @media (min-width: 810px) and (max-width: 1200px) {
-  section {
-    margin-bottom: 50px;
-  }
   h1 {
     font-size: 72px;
   }
 }
 
 @media (min-width: 670px) and (max-width: 810px) {
-  section {
-    margin-bottom: 50px;
-  }
   h1 {
     font-size: 58px;
   }
@@ -153,7 +152,9 @@ ul {
 
 @media (max-width: 670px) {
   section {
-    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
   h1 {
     font-size: 44px;

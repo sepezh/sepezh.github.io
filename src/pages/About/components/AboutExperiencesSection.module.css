@@ -42,6 +42,14 @@
   flex-direction: column;
 }
 
+.subtextsWrapper {
+  :global(p) {
+    font-size: 14px;
+    color: var(--subtext-color);
+    font-style: italic;
+  }
+}
+
 @media (max-width: 670px) {
   .experienceId {
     font-size: 48px;
