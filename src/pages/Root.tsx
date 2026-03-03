@@ -8,8 +8,11 @@ export default function RootLayout() {
 
   useEffect(() => {
     const lastMatch = matches[matches.length - 1];
-    const data = lastMatch.data as { title?: string } | undefined;
-    const title = data?.title || 'Full Stack Developer | Sepezh';
+    const title =
+      (lastMatch.handle as { title?: string })?.title ||
+      (lastMatch.data as { title?: string })?.title ||
+      'Full Stack Developer | Sepezh';
+
     document.title = title;
   }, [matches]);
 
