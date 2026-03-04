@@ -1,4 +1,4 @@
-import profileImg from '../../../assets/Profile.png';
+import profileImg from '../../../assets/Profile.jpg';
 import IntroSection from '../../../components/shared/IntroSection/IntroSection';
 import Button from '../../../components/ui/Button/Button';
 import classes from './HomeIntroSection.module.css';
