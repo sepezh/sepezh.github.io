@@ -1,7 +1,11 @@
-import HomeExperiencesSection from "./components/HomeExperiencesSection.tsx";
-import HomeIntroSection from "./components/HomeIntroSection.tsx";
-import HomeProjectsSection from "./components/HomeProjectsSection.tsx";
-import HomeSkillsSection from "./components/HomeSkillsSection.tsx";
+import { lazy } from 'react';
+
+import HomeIntroSection from './components/HomeIntroSection.tsx';
+import HomeProjectsSection from './components/HomeProjectsSection.tsx';
+import HomeSkillsSection from './components/HomeSkillsSection.tsx';
+const HomeExperiencesSection = lazy(
+  () => import('./components/HomeExperiencesSection.tsx')
+);
 
 export default function Home() {
   return (

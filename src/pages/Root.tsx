@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { Outlet, useMatches } from 'react-router-dom';
-import Header from '../components/Header/Header';
+
+const Header = lazy(() => import('../components/Header/Header'));
 import Footer from '../components/Footer/Footer';
 
 export default function RootLayout() {

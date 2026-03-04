@@ -2,8 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 import { useTheme } from '../../context/theme-context';
 import classes from './Header.module.css';
-import { useState } from 'react';
-import BurgerMenu from './BurgerMenu';
+import { lazy, useState } from 'react';
+const BurgerMenu = lazy(() => import('./BurgerMenu'));
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -73,7 +73,6 @@ export default function Header() {
           {theme === 'light' ? (
             <span className="material-symbols-rounded">nightlight</span>
           ) : (
-            // <FontAwesomeIcon icon={faSun} />
             <span className="material-symbols-rounded">wb_sunny</span>
           )}
         </button>

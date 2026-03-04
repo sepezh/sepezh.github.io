@@ -1,4 +1,5 @@
 import { skillsCategories } from '../../../data/skills';
+
 import classes from './HomeSkillsSection.module.css';
 
 export default function HomeSkillsSection() {

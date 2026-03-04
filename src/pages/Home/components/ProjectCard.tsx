@@ -1,8 +1,8 @@
 import type { FC } from 'react';
-
-import classes from './ProjectCard.module.css';
-import BaseImageWrapper from '../../../components/shared/BaseImageWrapper/BaseImageWrapper';
 import { Link } from 'react-router-dom';
+
+import BaseImageWrapper from '../../../components/shared/BaseImageWrapper/BaseImageWrapper';
+import classes from './ProjectCard.module.css';
 
 type ProjectCardProps = {
   image: string;

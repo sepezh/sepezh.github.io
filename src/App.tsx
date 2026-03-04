@@ -1,13 +1,15 @@
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Home from './pages/Home/Home.tsx';
 import RootLayout from './pages/Root.tsx';
-import About from './pages/About/About.tsx';
-import Projects from './pages/Projects/Projects.tsx';
-import Project, { projectLoader } from './pages/Project/Project.tsx';
-import Contact from './pages/Contact/Contact.tsx';
-import { ThemeProvider } from './context/theme-context.tsx';
 import ProjectsRoot from './pages/ProjectsRoot.tsx';
+const Home = lazy(() => import('./pages/Home/Home.tsx'));
+const About = lazy(() => import('./pages/About/About.tsx'));
+const Projects = lazy(() => import('./pages/Projects/Projects.tsx'));
+const Contact = lazy(() => import('./pages/Contact/Contact.tsx'));
+const Project = lazy(() => import('./pages/Project/Project.tsx'));
+import { projectLoader } from './pages/Project/projectLoader.ts';
+import { ThemeProvider } from './context/theme-context.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,11 @@ const router = createBrowserRouter([
           },
           {
             path: ':projectName',
-            element: <Project />,
+            element: (
+              <Suspense fallback={<div>Loading project...</div>}>
+                <Project />
+              </Suspense>
+            ),
             loader: projectLoader,
           },
         ],

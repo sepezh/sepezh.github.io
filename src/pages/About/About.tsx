@@ -1,6 +1,10 @@
+import { lazy } from 'react';
+
 import AboutIntroSection from './components/AboutIntroSection';
-import AboutSkillsSection from './components/AboutSkillsSection';
-import AboutExperiencesSection from './components/AboutExperiencesSection';
+const AboutSkillsSection = lazy(() => import('./components/AboutSkillsSection'));
+const AboutExperiencesSection = lazy(
+  () => import('./components/AboutExperiencesSection')
+);
 import AboutStorySection from './components/AboutStorySection';
 
 export default function About() {
