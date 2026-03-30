@@ -82,27 +82,43 @@
   }
 
   .navList {
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 60px;
     right: 0;
     width: 100%;
+    height: 100vh;
     background: var(--bg-color);
+    transform: translateX(100%);
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 2.5rem;
-    gap: 0.4rem;
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    align-items: center;
+    padding-top: 100px;
+    transition: transform 0.5s cubic-bezier(0.6, 0.8, 0.6, 1);
+    z-index: 5;
+    pointer-events: none;
   }
 
   .navListOpen {
-    max-height: 300px;
-    opacity: 1;
-    transform: translateY(0);
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    transform: translateX(0);
+    pointer-events: auto;
+    padding-top: 100px;
+
+    li:not(:last-child) {
+      position: relative;
+
+      ::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 70px;
+        top: 40px;
+        left: 50%;
+        background-color: var(--color-brand-purple);
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
   }
 }

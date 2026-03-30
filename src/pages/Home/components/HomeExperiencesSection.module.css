@@ -83,8 +83,6 @@
 }
 
 .taskList {
-  list-style: square;
-
   li::marker {
     color: var(--color-brand-purple);
   }

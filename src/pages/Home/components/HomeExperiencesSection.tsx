@@ -6,6 +6,7 @@ import classes from './HomeExperiencesSection.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import TechTag from '../../../components/ui/TechTag/TechTag';
+import DurationDate from '../../../components/shared/DurationDate/DurationDate';
 
 export default function HomeExperiencesSection() {
   const [selectedComponyId, setSelectedComponyId] =
@@ -16,6 +17,9 @@ export default function HomeExperiencesSection() {
   const selectedExperience: experienceType | undefined = experiences.find(
     item => item.company.compony_id === selectedComponyId
   );
+
+  const now = new Date();
+  console.log(now.getUTCMonth(), 'NOW');
 
   const nextBtnHandler = () => {
     setFade(true);
@@ -76,7 +80,15 @@ export default function HomeExperiencesSection() {
                 </span>
               </h4>
               <div className={classes.subtextsWrapper}>
-                <p>{selectedExperience.date}</p>
+                <p>
+                  {selectedExperience.date} (
+                  <DurationDate
+                    start={selectedExperience.date.split(' - ')[0]}
+                    end={selectedExperience.date.split(' - ')[1]}
+                  />
+                  )
+                </p>
+
                 <p>{selectedExperience.company.about}</p>
               </div>
               <TechTag tags={selectedExperience.techTags} />

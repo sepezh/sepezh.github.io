@@ -1,7 +1,6 @@
 import profileImg from '../../../assets/Profile.jpg';
 import IntroSection from '../../../components/shared/IntroSection/IntroSection';
 import Button from '../../../components/ui/Button/Button';
-import classes from './HomeIntroSection.module.css';
 
 export default function HomeIntroSection() {
   return (
@@ -18,7 +17,7 @@ export default function HomeIntroSection() {
           beautiful websites your users will love."
         profileImg={profileImg}
       >
-        <div className={classes.pBtns}>
+        <div className='BtnsWrapper'>
           <Button href="mailto:sepide.eslamnezhad@gmail.com" variant="primary">
             Get In Touch
           </Button>

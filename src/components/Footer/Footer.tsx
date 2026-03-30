@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classes from './Footer.module.css';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons/faGithubSquare';
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faSquareXing } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 export default function Footer() {
@@ -48,6 +48,13 @@ export default function Footer() {
           className={classes.link}
         >
           <FontAwesomeIcon icon={faGithubSquare}></FontAwesomeIcon>
+        </a>
+        <a
+          href="https://www.xing.com/profile/Sepide_Nezhad"
+          target="_blank"
+          className={classes.link}
+        >
+          <FontAwesomeIcon icon={faSquareXing} />
         </a>
         <a
           href="https://www.linkedin.com/in/saeideh-nezhad/"

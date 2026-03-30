@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    max-width: fit-content;
   }
 
   .iconsBorder {
@@ -22,6 +23,39 @@
 
     :global(.material-symbols-rounded) {
       padding-top: 4px;
+    }
+  }
+}
+
+.contact-icons {
+  .tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--color-brand-purple); 
+    color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    transform: translateY(120%);
+  }
+}
+
+.contact-icons {
+  display: flex;
+  gap: 30px;
+
+  .link {
+    svg {
+      font-size: 32px;
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--color-brand-purple);
+      }
+    }
+
+    &:hover .tooltip {
+      display: block;
     }
   }
 }

@@ -9,6 +9,8 @@ type ButtonProps = {
   type?: 'button' | 'submit';
   children?: ReactNode;
   variant: 'primary' | 'secondary';
+  target?: string;
+  rest?: any;
 };
 
 const Button: FC<ButtonProps> = ({
@@ -18,25 +20,27 @@ const Button: FC<ButtonProps> = ({
   type = 'button',
   children,
   variant = 'primary',
+  target,
+  rest,
 }) => {
   const className = `${classes.btn} ${classes[variant]}`;
   if (href) {
     return (
-      <a href={href} className={className}>
+      <a href={href} target={target} className={className} {...rest}>
         {children}
       </a>
     );
   }
   if (to) {
     return (
-      <Link to={to} className={className}>
+      <Link to={to} className={className} {...rest}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={className} type={type} onClick={onClick}>
+    <button className={className} type={type} onClick={onClick} {...rest}>
       {children}
     </button>
   );

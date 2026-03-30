@@ -1,13 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import { useTheme } from '../../context/theme-context';
 import classes from './Header.module.css';
-import { lazy, useState } from 'react';
+import { lazy, useEffect, useState } from 'react';
 const BurgerMenu = lazy(() => import('./BurgerMenu'));
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <header className={classes.header}>
@@ -17,7 +26,9 @@ export default function Header() {
       </NavLink>
       <nav>
         <ul
-          className={classes.navList + (open ? ` ${classes.navListOpen}` : '')}
+          className={
+            classes.navList + (isOpen ? ` ${classes.navListOpen}` : '')
+          }
         >
           <li>
             <NavLink
@@ -63,8 +74,8 @@ export default function Header() {
         </ul>
       </nav>
       <BurgerMenu
-        open={open}
-        setOpen={setOpen}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
         theme={theme}
         toggleTheme={toggleTheme}
       />

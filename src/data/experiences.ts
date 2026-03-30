@@ -19,7 +19,7 @@ export const experiences: experienceType[] = [
   {
     id: '01',
     role: 'Frontend Developer',
-    date: 'April - Jun 2025',
+    date: 'April 2025 - Jun 2025',
     location: 'Neumarkt, Germany',
     tasks: [
       {
@@ -94,7 +94,7 @@ export const experiences: experienceType[] = [
   {
     id: '03',
     role: 'Frontend Developer',
-    date: 'July - September 2019',
+    date: 'July 2019 - September 2019',
     location: 'Tehran, Iran',
     tasks: [
       {

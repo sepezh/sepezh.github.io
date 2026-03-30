@@ -68,7 +68,7 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
           <p>{exp.company.about}</p>
         </div>
         <TechTag tags={exp.techTags} />
-        <ul>
+        <ul className={classes.taskList}>
           {exp.tasks.map(task => (
             <li key={task.id}>{task.text}</li>
           ))}

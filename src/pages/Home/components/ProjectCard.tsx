@@ -19,6 +19,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
   const projectLink = name.toLowerCase();
   const className = `${classes.proj} ${classes[variant]}`;
+
   return (
     <div className={className}>
       <div className={classes.container}>

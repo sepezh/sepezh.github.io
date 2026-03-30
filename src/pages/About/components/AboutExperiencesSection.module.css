@@ -50,6 +50,16 @@
   }
 }
 
+.taskList {
+  li::marker {
+    color: var(--color-brand-purple);
+  }
+
+  :global(li) {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 670px) {
   .experienceId {
     font-size: 48px;

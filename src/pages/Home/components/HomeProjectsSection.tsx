@@ -3,6 +3,7 @@ import classes from './HomeProjectsSection.module.css';
 import ProjectCard from './ProjectCard';
 
 export default function HomeProjectsSection() {
+  console.log(projects);
   return (
     <section className={classes.projectsSection}>
       <h2>

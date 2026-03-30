@@ -3,6 +3,14 @@
   gap: 6rem;
 }
 
+.techInfoWrapper {
+  flex: 1;
+
+  :global(h2) {
+    margin-top: -10px; /* Adjust the margin to align with the top of the section */
+  }
+}
+
 @media (min-width: 810px) and (max-width: 1200px) {
   .detailWrapper {
     gap: 3rem;

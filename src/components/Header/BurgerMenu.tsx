@@ -1,18 +1,18 @@
-import type { FC } from 'react';
+import { type FC } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import classes from './BurgerMenu.module.css';
 
 type BurgerMenuProps = {
-  open: boolean;
-  setOpen: (value: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
   theme: string;
   toggleTheme: () => void;
 };
 
 const BurgerMenu: FC<BurgerMenuProps> = ({
-  open,
-  setOpen,
+  isOpen,
+  setIsOpen,
   theme,
   toggleTheme,
 }) => {
@@ -29,10 +29,10 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
       <button
         className={classes.burger}
         aria-label="Toggle menu"
-        onClick={() => setOpen(!open)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <AnimatePresence mode="wait">
-          {open ? (
+          {isOpen ? (
             <motion.div
               key="close"
               initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
@@ -44,7 +44,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({
             </motion.div>
           ) : (
             <motion.div
-              key="open"
+              key="isOpen"
               initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, rotate: -90, scale: 0.5 }}

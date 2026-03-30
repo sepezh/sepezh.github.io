@@ -16,7 +16,7 @@ export default function ProjectInfoCard({ client, year, role }: Props) {
   );
 }
 
-function InfoBlock({
+export function InfoBlock({
   label,
   value,
 }: {
