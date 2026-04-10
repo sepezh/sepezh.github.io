@@ -12,11 +12,7 @@
   color: var(--bg-color);
 
   &:hover,
-  &:focus,
-  &:focus-within,
-  &:focus-visible,
-  &:active,
-  &:target {
+  &:active {
     background-color: var(--color-brand-purple-hovered);
     color: var(--bg-color);
   }
@@ -28,11 +24,7 @@
   border: 1px solid var(--text-color);
 
   &:hover,
-  &:focus,
-  &:focus-within,
-  &:focus-visible,
-  &:active,
-  &:target {
+  &:active {
     background-color: var(--text-color);
     color: var(--bg-color);
   }

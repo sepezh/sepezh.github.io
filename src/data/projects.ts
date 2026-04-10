@@ -1,4 +1,6 @@
-import secondProjectImg from '../assets/secondProjectImg.avif';
+import insightboardFullImg from '../assets/insightboardFull.png';
+import insightboardMobileImg1 from '../assets/insightboardMob1.png';
+import insightboardMobileImg2 from '../assets/insightboardMob2.png';
 import nutriFitFullImg from '../assets/nutrifitFull.png';
 import nutriFitMobileImg1 from '../assets/nutrifitMob1.png';
 import nutriFitMobileImg2 from '../assets/nutrifitMob2.png';
@@ -99,22 +101,73 @@ export const projects: projectType[] = [
   },
   {
     id: 2,
-    name: 'Taskflow',
-    image: secondProjectImg,
+    name: 'Insightboard',
+    url: 'https://insightboard-zeta.vercel.app/dashboard',
+    githubUrl: 'https://github.com/sepezh/InsightBoard',
+    image: insightboardFullImg,
+    imagesMobile: [insightboardMobileImg1, insightboardMobileImg2],
     description:
-      'Task management system with drag-and-drop, real-time collaboration, and responsive layout.',
+      'A modern analytics dashboard built with Next.js and TypeScript. It delivers a polished, responsive interface for exploring metrics, trends, and time-series data through interactive cards and charts.',
     about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    // features:
-    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'InsightBoard provides a centralized platform for exploring and analyzing key metrics and trends. It addresses the common challenge of visualizing complex data in an intuitive, interactive way that supports data-driven decision-making. The project emphasizes a clean, responsive experience and efficient data handling that help users quickly discover insights across devices. By streamlining data exploration and visualization, InsightBoard demonstrates a commitment to usability and performance-driven design.',
+    features: [
+      {
+        id: 1,
+        key: 'Responsive Analytics Dashboard',
+        value:
+          'Browse a curated collection of metrics and trends through interactive charts',
+      },
+      {
+        id: 2,
+        key: 'Advanced Filtering',
+        value:
+          'Filter analytics data by date range, category, or metric type for deeper exploration',
+      },
+      {
+        id: 3,
+        key: 'Dashboard Widgets',
+        value:
+          'Reusable dashboard components displaying key indicators such as totals, growth rates, and summaries',
+      },
+      {
+        id: 4,
+        key: 'Optimized Rendering',
+        value:
+          'Lazy-loaded chart components for performance and smooth interactions even with large datasets',
+      },
+      {
+        id: 5,
+        key: 'Theme Customization',
+        value:
+          'Light and dark theme support to improve usability in different environments',
+      },
+      {
+        id: 6,
+        key: 'State Management',
+        value: 'Redux Toolkit for filters and selected metrics',
+      },
+    ],
     chanllenges: [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Implementing responsive chart interactions required coordinating multiple libraries while keeping performance optimal. The solution was to use Recharts with lazy loading and skeleton components for better user experience.',
+      'Managing state for filters and selected metrics across components presented edge cases when updating multiple charts simultaneously. A centralized Redux slice now handles all analytics state, preventing conflicts without user intervention.',
     ],
     results: [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Delivered a fully responsive analytics platform with interactive charts and efficient data handling.',
+      'Enabled data-driven insights, increasing usability through intuitive visualizations.',
+      'Optimized page load times using lazy loading and modern React features.',
+      'Demonstrated proficiency in modern Next.js features and state management patterns.',
+    ],
+    techStack: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'Recharts (data visualization)',
+      'Redux Toolkit (state management)',
+      'React Datepicker',
     ],
     client: 'Personal Project',
-    year: 2020,
+    year: 2026,
     role: 'Software Developer',
     variant: 'span3',
   },
@@ -172,7 +225,7 @@ export const projects: projectType[] = [
       'JavaScript (ES6+)',
       'jQuery',
       'SASS/SCSS for styling workflow',
-      'Gulp for asset automation'
+      'Gulp for asset automation',
     ],
     client: 'Personal Project',
     year: 2017,
