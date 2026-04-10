@@ -95,7 +95,7 @@ export default function HomeExperiencesSection() {
             </div>
             <ul className={classes.taskList}>
               {selectedExperience.tasks.map(task => (
-                <li key={task.id}>{task.text}</li>
+                <li dangerouslySetInnerHTML={{ __html: task.text }} key={task.id} />
               ))}
             </ul>
           </div>

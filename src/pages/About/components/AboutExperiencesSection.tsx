@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { experiences, type experienceType } from '../../../data/experiences';
 import classes from './AboutExperiencesSection.module.css';
 import TechTag from '../../../components/ui/TechTag/TechTag';
+import DurationDate from '../../../components/shared/DurationDate/DurationDate';
 
 export default function AboutExperiencesSection() {
   return (
@@ -63,14 +64,21 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
         <p className="purple">{exp.role}</p>
         <h3>{exp.company.compony_name}</h3>
         <div className={classes.subtextsWrapper}>
-          <p>{exp.date}</p>
+          <p>
+            {exp.date} (
+            <DurationDate
+              start={exp.date.split(' - ')[0]}
+              end={exp.date.split(' - ')[1]}
+            />
+            )
+          </p>
           <p>{exp.location}</p>
           <p>{exp.company.about}</p>
         </div>
         <TechTag tags={exp.techTags} />
         <ul className={classes.taskList}>
           {exp.tasks.map(task => (
-            <li key={task.id}>{task.text}</li>
+            <li dangerouslySetInnerHTML={{ __html: task.text }} key={task.id} />
           ))}
         </ul>
       </div>

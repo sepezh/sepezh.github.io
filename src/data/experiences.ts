@@ -24,15 +24,15 @@ export const experiences: experienceType[] = [
     tasks: [
       {
         id: 1,
-        text: 'Developed reusable React components using TypeScript to improve maintainability and scalability',
+        text: 'Developed reusable <b>React</b> components using <b>TypeScript</b> to improve maintainability and scalability',
       },
       {
         id: 2,
-        text: 'Built prototypes using Next.js and an internal CMS to validate new product ideas',
+        text: 'Built prototypes using <b>Next.js</b> and an internal <b>CMS</b> to validate new product ideas',
       },
       {
         id: 3,
-        text: 'Documented and tested UI components with Storybook and Vitest',
+        text: 'Documented and tested UI components with <b>Storybook</b> and <b>Vitest</b>',
       },
       {
         id: 4,
@@ -61,11 +61,11 @@ export const experiences: experienceType[] = [
     tasks: [
       {
         id: 1,
-        text: 'Developed and maintained B2B dashboards using React, TypeScript and Redux',
+        text: 'Developed and maintained <b>B2B dashboards</b> using <b>React</b>, <b>TypeScript</b> and <b>Redux</b>',
       },
       {
         id: 2,
-        text: 'Implemented new features and integrated REST APIs for dynamic data handling',
+        text: 'Implemented new features and integrated <b>REST APIs</b> for dynamic data handling',
       },
       {
         id: 3,
@@ -73,7 +73,7 @@ export const experiences: experienceType[] = [
       },
       {
         id: 4,
-        text: 'Worked closely with designers, developers and product managers in an agile Scrum team',
+        text: 'Worked closely with designers, developers and product managers in an <b>agile Scrum team</b>',
       },
     ],
     company: {
@@ -99,19 +99,19 @@ export const experiences: experienceType[] = [
     tasks: [
       {
         id: 1,
-        text: 'Built frontend components for mobile applications using React Native',
+        text: 'Built frontend components for mobile applications using <b>React Native</b>',
       },
       {
         id: 2,
-        text: 'Integrated REST APIs to display and manage dynamic data',
+        text: 'Integrated <b>REST APIs</b> to display and manage dynamic data',
       },
       {
         id: 3,
-        text: 'Collaborated with teammates using Git in project-based development',
+        text: 'Collaborated with teammates using <b>Git</b> in project-based development',
       },
       {
         id: 4,
-        text: 'Contributed to UI improvements and bug fixes in an agile learning environment',
+        text: 'Contributed to UI improvements and bug fixes in an <b>agile</b> learning environment',
       },
     ],
     company: {
