@@ -34,7 +34,7 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['end', 'center'],
+    offset: ['start end', 'center center'],
   });
 
   const height = useTransform(scrollYProgress, [0, 1], [0, contentHeight]);
