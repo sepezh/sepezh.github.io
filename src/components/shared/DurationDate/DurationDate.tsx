@@ -3,7 +3,6 @@ export default function DurationDate({ start, end }: { start: string; end: strin
   const start = new Date(startDate);
   const end = new Date(endDate);
   
-  console.log(startDate, endDate, "DURATION");
     let years = end.getFullYear() - start.getFullYear();
     let months = end.getMonth() - start.getMonth() + 1; // +1 to include the starting month
 

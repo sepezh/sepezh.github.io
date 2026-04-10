@@ -3,6 +3,7 @@ import { Outlet, useMatches } from 'react-router-dom';
 
 const Header = lazy(() => import('../components/Header/Header'));
 import Footer from '../components/Footer/Footer';
+import ScrollToTop from '../ScrollToTop';
 
 export default function RootLayout() {
   const matches = useMatches();
@@ -19,6 +20,8 @@ export default function RootLayout() {
 
   return (
     <>
+      <ScrollToTop />
+
       <Header />
       <Outlet />
       <Footer />

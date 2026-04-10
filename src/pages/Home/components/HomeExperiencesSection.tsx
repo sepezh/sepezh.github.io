@@ -18,9 +18,6 @@ export default function HomeExperiencesSection() {
     item => item.company.compony_id === selectedComponyId
   );
 
-  const now = new Date();
-  console.log(now.getUTCMonth(), 'NOW');
-
   const nextBtnHandler = () => {
     setFade(true);
     if (experienceNo < experiences.length - 1) {
