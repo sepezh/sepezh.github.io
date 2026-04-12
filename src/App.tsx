@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from './pages/Root.tsx';
 import ProjectsRoot from './pages/ProjectsRoot.tsx';
@@ -10,11 +10,13 @@ const Contact = lazy(() => import('./pages/Contact/Contact.tsx'));
 const Project = lazy(() => import('./pages/Project/Project.tsx'));
 import { projectLoader } from './pages/Project/projectLoader.ts';
 import { ThemeProvider } from './context/theme-context.tsx';
+import ErrorPage from './pages/Error.tsx';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     handle: { title: 'Home | Sepezh' },
     children: [
       {

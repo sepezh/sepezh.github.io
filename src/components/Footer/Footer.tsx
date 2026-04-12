@@ -50,7 +50,7 @@ export default function Footer() {
           <FontAwesomeIcon icon={faGithubSquare}></FontAwesomeIcon>
         </a>
         <a
-          href="https://www.xing.com/profile/Sepide_Nezhad"
+          href="https://www.xing.com/profile/Saeideh_Nezhad"
           target="_blank"
           className={classes.link}
         >

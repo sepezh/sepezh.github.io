@@ -44,7 +44,7 @@ export default function Contact() {
                 <span className={classes.tooltip}>GitHub</span>
               </a>
               <a
-                href="https://www.xing.com/profile/Sepide_Nezhad"
+                href="https://www.xing.com/profile/Saeideh_Nezhad"
                 target="_blank"
                 className={classes.link}
               >

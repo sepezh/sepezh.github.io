@@ -127,6 +127,20 @@ ul {
   margin: 1.5rem 0;
 }
 
+.error404-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+
+  p {
+    font-size: large;
+    font-weight: bold;
+  }
+}
+
 @media (min-width: 810px) and (max-width: 1200px) {
   h1 {
     font-size: 72px;
