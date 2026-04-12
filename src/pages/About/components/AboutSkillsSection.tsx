@@ -17,7 +17,7 @@ export default function AboutSkillsSection() {
             key={category.id}
             category={category}
             direction={index % 2 === 0 ? 'left' : 'right'}
-            speed={40 + index * 2}
+            speed={60 + index * 2}
           />
         ))}
       </div>

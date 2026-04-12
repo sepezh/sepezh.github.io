@@ -53,7 +53,7 @@ function ExperienceItem({ exp }: { exp: experienceType }) {
             style={{ height }}
             transition={{
               height: {
-                duration: 0.3,
+                duration: 0.7,
               },
             }}
           />

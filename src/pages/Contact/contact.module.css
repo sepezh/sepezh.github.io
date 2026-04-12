@@ -1,7 +1,7 @@
 .contactItemWrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 
   a {
     color: var(--text-color);
@@ -63,12 +63,12 @@
   }
 
   .contactItemWrapper {
-    padding: 20px 0;
+    padding: 25px 0;
   }
 }
 
 @media (max-width: 670px) {
   .contactItemWrapper {
-    padding: 20px 0;
+    padding: 25px 0;
   }
 }

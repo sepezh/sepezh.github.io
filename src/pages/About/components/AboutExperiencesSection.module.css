@@ -2,12 +2,19 @@
   display: flex;
   gap: 30px;
   margin-bottom: 50px;
+  align-items: flex-start;
 
   &:last-child {
     .experience-content {
       padding-bottom: 2rem;
     }
   }
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
 .progressbar-wrapper {
