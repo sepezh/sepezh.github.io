@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from './pages/Root.tsx';
 import ProjectsRoot from './pages/ProjectsRoot.tsx';
@@ -11,7 +11,7 @@ const Project = lazy(() => import('./pages/Project/Project.tsx'));
 import { projectLoader } from './pages/Project/projectLoader.ts';
 import { ThemeProvider } from './context/theme-context.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <RootLayout />,
