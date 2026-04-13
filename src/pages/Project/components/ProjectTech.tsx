@@ -1,6 +1,6 @@
 import type { projectType } from '../../../data/projects';
 
-import classes from './projectTech.module.css';
+import classes from './ProjectTech.module.css';
 
 export default function ProjectTech({ project }: { project: projectType }) {
   return (
