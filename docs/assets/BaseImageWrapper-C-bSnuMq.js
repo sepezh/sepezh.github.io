@@ -1,0 +1,1 @@
+import{j as s}from"./index-DPc7jo4v.js";function n({wrapperClass:a,containerClass:e,imgClass:r,src:i,alt:m}){return s.jsx("div",{className:a,children:s.jsx("div",{className:e,children:s.jsx("img",{className:r,src:i,alt:m})})})}export{n as B};
