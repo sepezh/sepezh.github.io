@@ -40,7 +40,7 @@ export const projects: projectType[] = [
   {
     id: 1,
     name: 'Booki',
-    url: 'https://booki-t772.onrender.com',
+    url: 'https://booki-ruby.vercel.app/',
     githubUrl: 'https://github.com/sepezh/booki',
     image: bookiFullImg,
     imagesMobile: [bookiMobileImg1, bookiMobileImg2],
