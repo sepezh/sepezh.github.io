@@ -92,7 +92,6 @@ export const projects: projectType[] = [
       'SQLite (lightweight database)',
       'OpenStreetMap API (geolocation service)',
       'Pylint / autopep8 (code quality tools)',
-      'Git (version control)',
     ],
     client: 'Personal Project',
     year: 2024,
@@ -250,7 +249,6 @@ export const projects: projectType[] = [
       'Slugify (URL generation)',
       ' XSS (security)',
       'ESLint (code quality)',
-      'Node.js',
     ],
     about:
       'NutriFit provides a centralized platform where active people can explore and contribute recipe ideas focused on high-protein nutrition. It addresses the common challenge of finding practical meal options that support training goals and healthy lifestyles. The project emphasizes a clean, responsive experience and collaborative features that help users quickly discover, upload, and navigate content across devices. By streamlining meal discovery and sharing, NutriFit demonstrates a commitment to usability and community-driven design.',
