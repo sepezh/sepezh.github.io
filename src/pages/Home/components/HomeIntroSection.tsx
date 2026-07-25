@@ -6,19 +6,18 @@ export default function HomeIntroSection() {
   return (
     <section>
       <IntroSection
-        greeting="Hey, I'm Saeideh"
+        greeting="Hey, I'm Sepide"
         emoji="👋🏻"
         title={
           <>
             <span className="purple">Front</span>end Developer
           </>
         }
-        description="I'm a frontend developer based in Germany, I'll help you build
-          beautiful websites your users will love."
+        description="I build fast, scalable and user‑focused web applications with clean architecture, creating interactive, responsive and data‑driven interfaces focused on performance and seamless user experience."
         profileImg={profileImg}
       >
-        <div className='BtnsWrapper'>
-          <Button href="mailto:sepide.eslamnezhad@gmail.com" variant="primary">
+        <div className="BtnsWrapper">
+          <Button href="mailto:sepide.nezhad92@gmail.com" variant="primary">
             Get In Touch
           </Button>
           <Button to="/projects" variant="secondary">
