@@ -39,7 +39,7 @@ const IntroSection: FC<IntroSectionProps> = ({
         <div className={classes.circle}>
           <div>
             <div>
-              <img className={classes.profileImg} src={profileImg} />
+              <img className={classes.profileImg} src={profileImg} alt="Profile" />
             </div>
           </div>
         </div>

@@ -46,6 +46,7 @@ export default function Footer() {
           href="https://www.github.com/sepezh"
           target="_blank"
           className={classes.link}
+          aria-label="GitHub profile"
         >
           <FontAwesomeIcon icon={faGithubSquare}></FontAwesomeIcon>
         </a>
@@ -53,6 +54,7 @@ export default function Footer() {
           href="https://www.xing.com/profile/Saeideh_Nezhad"
           target="_blank"
           className={classes.link}
+          aria-label="Xing profile"
         >
           <FontAwesomeIcon icon={faSquareXing} />
         </a>
@@ -60,6 +62,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/saeideh-nezhad/"
           target="_blank"
           className={classes.link}
+          aria-label="LinkedIn profile"
         >
           <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
         </a>
