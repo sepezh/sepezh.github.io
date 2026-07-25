@@ -17,6 +17,9 @@ export default function HomeIntroSection() {
         profileImg={profileImg}
       >
         <div className="BtnsWrapper">
+          <Button href="public/Sepide_Nezhad_Lebenslauf.pdf" download variant="primary">
+            Download CV
+          </Button>
           <Button href="mailto:sepide.nezhad92@gmail.com" variant="primary">
             Get In Touch
           </Button>
