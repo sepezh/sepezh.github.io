@@ -18,25 +18,25 @@ export type experienceType = {
 export const experiences: experienceType[] = [
   {
     id: '01',
-    role: 'Frontend Developer',
+    role: 'Software Developer',
     date: 'April 2025 - Jun 2025',
     location: 'Neumarkt, Germany',
     tasks: [
       {
         id: 1,
-        text: 'Developed reusable <b>React</b> components using <b>TypeScript</b> to improve maintainability and scalability',
+        text: 'Delivered end‑to‑end React/TypeScript features with responsive, accessible UI',
       },
       {
         id: 2,
-        text: 'Built prototypes using <b>Next.js</b> and an internal <b>CMS</b> to validate new product ideas',
+        text: 'Built Next.js prototypes with CMS + REST API integration',
       },
       {
         id: 3,
-        text: 'Documented and tested UI components with <b>Storybook</b> and <b>Vitest</b>',
+        text: 'Reduced UI bugs by 20% through Vitest/Storybook testing and refactoring',
       },
       {
         id: 4,
-        text: 'Collaborated closely with UI/UX designers, backend developers and project managers in Scrum teams',
+        text: 'Collaborated with design, backend, and product teams in Scrum; supported CI/CD workflows',
       },
     ],
     company: {
@@ -48,32 +48,37 @@ export const experiences: experienceType[] = [
       'React',
       'TypeScript',
       'Next.js',
-      'Storybook',
       'Vitest',
+      'CMS',
+      'Storybook',
       'Scrum',
     ],
   },
   {
     id: '02',
-    role: 'Frontend Developer',
-    date: 'December 2019 - March 2023',
+    role: 'Frontend Engineer',
+    date: 'December 2019 - April 2023',
     location: 'Tehran, Iran',
     tasks: [
       {
         id: 1,
-        text: 'Developed and maintained <b>B2B dashboards</b> using <b>React</b>, <b>TypeScript</b> and <b>Redux</b>',
+        text: 'Delivered 100+ React/TypeScript dashboards for ~700K users, replacing manual reporting with real-time logistics monitoring',
       },
       {
         id: 2,
-        text: 'Implemented new features and integrated <b>REST APIs</b> for dynamic data handling',
+        text: 'Migrated legacy JavaScript/React codebase to TypeScript, improving maintainability and velocity',
       },
       {
         id: 3,
-        text: 'Improved user interfaces to enhance usability and responsiveness',
+        text: 'Co-built a shared component library as one of three developers, enabling reusable components across dashboards',
       },
       {
         id: 4,
-        text: 'Worked closely with designers, developers and product managers in an <b>agile Scrum team</b>',
+        text: 'Improved dashboard performance by 25% through refactoring and optimized data flows',
+      },
+      {
+        id: 5,
+        text: 'Ensured reliability with WCAG-compliant UI and Jest/Cypress testing in an agile Scrum environment',
       },
     ],
     company: {
@@ -84,6 +89,7 @@ export const experiences: experienceType[] = [
     techTags: [
       'React',
       'TypeScript',
+      'JavaScript',
       'Redux',
       'Context API',
       'React Router',
@@ -93,25 +99,25 @@ export const experiences: experienceType[] = [
   },
   {
     id: '03',
-    role: 'Frontend Developer',
+    role: 'Software Engineer (Intern)',
     date: 'July 2019 - September 2019',
     location: 'Tehran, Iran',
     tasks: [
       {
         id: 1,
-        text: 'Built frontend components for mobile applications using <b>React Native</b>',
+        text: 'Built React Native components and backend functionality in Java, contributing to full-stack product development',
       },
       {
         id: 2,
-        text: 'Integrated <b>REST APIs</b> to display and manage dynamic data',
+        text: 'Implemented UI designs and resolved usability issues with a focus on clean, maintainable frontend architecture',
       },
       {
         id: 3,
-        text: 'Collaborated with teammates using <b>Git</b> in project-based development',
+        text: 'Used Git for collaborative development and version control',
       },
       {
         id: 4,
-        text: 'Contributed to UI improvements and bug fixes in an <b>agile</b> learning environment',
+        text: 'Participated in Scrum processes and contributed to a well-structured, maintainable codebase',
       },
     ],
     company: {
